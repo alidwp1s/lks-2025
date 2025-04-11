@@ -21,12 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/login', [AuthController::class, 'login']);
-
-
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/games', [GameController::class, 'index']); // Contoh: lihat game
-    Route::post('/games', [GameController::class, 'store']); // Upload game (dev)
-    Route::get('/users', [UserController::class, 'index']); // Kelola user (admin)
-    Route::post('/play/{game}', [GameController::class, 'play']); // Mainkan game (player)
-});
+Route::post('/login/user', [AuthController::class, 'loginUser']);
+Route::post('/login/admin', [AuthController::class, 'loginAdmin']);

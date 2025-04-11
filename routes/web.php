@@ -16,18 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/games', function () {
-    return view('games');
-});
+
 Route::get('/admin', function () {
+    return view('login_admin');
+});
+Route::get('/user', function () {
+    return view('login_user');
+});
+
+// Dashboard
+Route::get('/admin/dashboard', function () {
     return view('dashboard_admin');
 });
-Route::get('/developer', function () {
+Route::get('/developer/dashboard', function () {
     return view('dashboard_dev');
 });
-Route::get('/player', function () {
+Route::get('/player/dashboard', function () {
     return view('dashboard_player');
 });
