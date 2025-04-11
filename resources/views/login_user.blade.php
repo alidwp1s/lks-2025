@@ -35,7 +35,7 @@
         if (role === 'developer') {
           window.location.href = '/developer/dashboard';
         } else {
-          window.location.href = '/player/dashboard';
+          window.location.href = '/user/dashboard';
         }
       }).catch(err => {
         document.getElementById('message').innerText = 'Login gagal';

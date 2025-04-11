@@ -31,6 +31,6 @@ Route::get('/admin/dashboard', function () {
 Route::get('/developer/dashboard', function () {
     return view('dashboard_dev');
 });
-Route::get('/player/dashboard', function () {
+Route::get('/user/dashboard', function () {
     return view('dashboard_player');
 });
