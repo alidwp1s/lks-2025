@@ -31,7 +31,6 @@
         alert('Login berhasil!');
         localStorage.setItem('token', res.data.token);
 
-        // Bisa diarahkan sesuai role dari response
         const role = res.data.user.role;
         if (role === 'developer') {
           window.location.href = '/developer/dashboard';
