@@ -18,7 +18,7 @@
          <li><a href="manage-games.html" class="nav-link px-2 text-white">Manage Games</a></li>
          <li><a href="profile.html" class="nav-link px-2 text-white">User Profile</a></li>
          <li class="nav-item">
-           <a class="nav-link active bg-dark" href="#">Welcome, Player1</a>
+             <a class="nav-link active bg-dark" href="#">Welcome, {{ Auth::user()->username }}</a>
          </li> 
          <li class="nav-item">
           <button onclick="logout()" class="btn bg-white text-primary ms-4">Sign Out</button>
