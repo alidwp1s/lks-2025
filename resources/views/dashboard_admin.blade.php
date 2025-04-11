@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard - Administrator Portal</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
   </head>
   <body>
    
@@ -20,7 +20,7 @@
            <a class="nav-link active bg-dark" href="#">Welcome, Administrator</a>
          </li> 
          <li class="nav-item">
-          <a href="../signin.html" class="btn bg-white text-primary ms-4">Sign Out</a>
+          <button onclick="logout()" class="btn bg-white text-primary ms-4">Sign Out</button>
          </li>
        </ul> 
       </div>
@@ -45,7 +45,14 @@
     </main>
    
 
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
+    <script>
+      function logout() {
+        localStorage.removeItem('token');
+        alert('Logged out!');
+        window.location.href = '/admin';
+      }
+    </script>
   </body>
 </html>
