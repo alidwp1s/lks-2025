@@ -1,36 +1,40 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('login_admin');
-});
+//! Login Pages
 Route::get('/user', function () {
     return view('login_user');
+})->name('login');
+Route::get('/admin', function () {
+    return view('login_admin');
+})->name('login.admin');
+
+Route::middleware('auth:web')->group(function () {
+    Route::get('/user/dashboard', function () {
+        return view('dashboard_player');
+    });
 });
 
-// Dashboard
-Route::get('/admin/dashboard', function () {
-    return view('dashboard_admin');
+Route::middleware('auth:administrator')->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('dashboard_admin');
+    });
 });
-Route::get('/developer/dashboard', function () {
-    return view('dashboard_dev');
-});
-Route::get('/user/dashboard', function () {
-    return view('dashboard_player');
+
+Route::middleware('auth:developer')->group(function () {
+    Route::get('/developer/dashboard', function () {
+        return view('dashboard_dev');
+    });
 });

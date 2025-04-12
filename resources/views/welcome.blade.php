@@ -5,6 +5,6 @@
 </head>
 <body>
   <h1>Selamat datang di Platform Game Browser Online!</h1>
-  <p><a href="/login">Login</a> untuk mulai menggunakan platform.</p>
+  <p><a href="/user">Login</a> untuk mulai menggunakan platform.</p>
 </body>
 </html>

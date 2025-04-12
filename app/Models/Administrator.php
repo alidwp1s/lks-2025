@@ -9,6 +9,13 @@ class Administrator extends Authenticatable
 {
   use HasApiTokens;
 
-  protected $fillable = ['username', 'password', 'last_login_at'];
-  protected $hidden = ['password'];
+  protected $fillable = [
+    'username',
+    'password',
+    'last_login_at',
+  ];
+
+  protected $hidden = [
+    'password',
+  ];
 }
