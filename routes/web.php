@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdministratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +51,6 @@ Route::post('/logout', function () {
 
 Route::post('/user/dashboard', [UserController::class, 'login']);
 Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('dashboard_player');
+
+Route::post('/admin/dashboard', [AdministratorController::class, 'login']);
+Route::get('/admin/dashboard', [AdministratorController::class, 'dashboard'])->name('admin.dashboard');
