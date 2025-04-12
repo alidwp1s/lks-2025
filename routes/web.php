@@ -24,6 +24,14 @@ Route::get('/admin', function () {
     return view('login_admin');
 })->name('login.admin');
 
+Route::get('/user/dashboard/discover', function () {
+    return view('games');
+});
+
+Route::get('/user/dashboard/manage', function () {
+    return view('#');
+});
+
 Route::middleware('auth:web')->group(function () {
     Route::get('/user/dashboard', function () {
         return view('dashboard_player');

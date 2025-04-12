@@ -14,8 +14,8 @@
         <a class="navbar-brand" href="index.html">Gaming Portal</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           
-         <li><a href="discover-games.html" class="nav-link px-2 text-white">Discover Games</a></li>
-         <li><a href="manage-games.html" class="nav-link px-2 text-white">Manage Games</a></li>
+         <li><a href="/discover" class="nav-link px-2 text-white">Discover Games</a></li>
+         <li><a href="/manage" class="nav-link px-2 text-white">Manage Games</a></li>
          <li><a href="profile.html" class="nav-link px-2 text-white">User Profile</a></li>
          <li class="nav-item">
            <a class="nav-link active bg-dark" href="#">Welcome, Player1</a>

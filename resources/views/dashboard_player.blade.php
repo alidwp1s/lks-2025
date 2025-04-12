@@ -14,8 +14,8 @@
         <a class="navbar-brand" href="#">Gaming Portal</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-         <li><a href="#" class="nav-link px-2 text-white">Discover Games</a></li>
-         <li><a href="#" class="nav-link px-2 text-white">Manage Games</a></li>
+         <li><a href="/user/dashboard/discover" class="nav-link px-2 text-white">Discover Games</a></li>
+         <li><a href="/user/dashboard/manage" class="nav-link px-2 text-white">Manage Games</a></li>
          <li><a href="#" class="nav-link px-2 text-white">User Profile</a></li>
          
          @php
