@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Login User</title>
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body class="bg-light">
   <div class="container mt-5">

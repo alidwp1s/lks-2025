@@ -20,7 +20,7 @@ class UserAuthController extends Controller
             $request->session()->regenerate();
 
             $user = Auth::user();
-            return redirect($user->role === 'developer' ? '/developer/dashboard' : '/user/dashboard');
+            return redirect($user->role === 'user' ? '/user/dashboard' : '/developer/dashboard');
         }
 
         return back()->withErrors([
