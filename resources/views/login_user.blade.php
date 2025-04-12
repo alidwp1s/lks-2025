@@ -7,22 +7,27 @@
 <body class="bg-light">
   <div class="container mt-5">
     <h3>Login Developer / Player</h3>
-    <div class="card p-4">
-      <div class="mb-3">
-        <label>Username</label>
-        <input type="text" id="username" class="form-control">
+    <form method="POST" action="/user/dashboard">
+    @csrf
+      <div class="card p-4">
+        <div class="mb-3">
+          <label>Username</label>
+          <input type="text" id="username" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label>Password</label>
+          <input type="password" id="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+        @if($errors->any())
+        <div class="text-danger mt-2">{{ $errors->first() }}</div>
+        @endif
       </div>
-      <div class="mb-3">
-        <label>Password</label>
-        <input type="password" id="password" class="form-control">
-      </div>
-      <button onclick="loginUser()" class="btn btn-success">Login</button>
-      <div id="message" class="mt-3 text-danger"></div>
-    </div>
+    </form>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
+  {{-- <script>
     function loginUser() {
       axios.post('/api/login/user', {
         username: document.getElementById('username').value,
@@ -41,6 +46,6 @@
         document.getElementById('message').innerText = 'Login gagal';
       });
     }
-  </script>
+  </script> --}}
 </body>
 </html>
