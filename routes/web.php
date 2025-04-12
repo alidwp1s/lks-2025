@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,9 @@ Route::middleware('auth:developer')->group(function () {
     });
 });
 
-
 Route::get('/user', [UserAuthController::class, 'showLoginForm'])->name('login');
 Route::post('/user', [UserAuthController::class, 'login']);
 Route::post('/logout', [UserAuthController::class, 'logout'])->name('logout');
+
+Route::post('/user/dashboard', [UserController::class, 'login']);
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
