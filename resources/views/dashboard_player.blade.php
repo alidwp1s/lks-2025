@@ -27,7 +27,10 @@
            <a class="nav-link active bg-dark" href="#">Welcome, {{ $player->username }}</a>
          </li>
          <li class="nav-item">
-           <button onclick="logout()" class="btn bg-white text-primary ms-4">Sign Out</button>
+           <form method="POST" action="{{ route('logout') }}">
+               @csrf
+               <button type="submit" class="btn bg-white text-primary ms-4">Sign Out</button>
+           </form>
          </li>
          @else
          <li class="nav-item">

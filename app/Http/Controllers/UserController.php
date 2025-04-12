@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -13,17 +16,19 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        if ($request->username === 'user' && $request->password === 'password') {
+        $user = User::where('username', $request->username)->first();
 
-            session(['user' => $request->username]);
+        if ($user && Hash::check($request->password, $user->password)) {
+            Auth::login($user);
 
-            return redirect()->route('user.dashboard');
+            return redirect()->route('dashboard_player');
         }
+
         return back()->withErrors(['Invalid username or password']);
     }
 
     public function dashboard()
     {
-        return view('user.dashboard');
+        return view('dashboard_player');
     }
 }

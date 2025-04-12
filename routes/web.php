@@ -43,7 +43,10 @@ Route::middleware('auth:developer')->group(function () {
 
 Route::get('/user', [UserAuthController::class, 'showLoginForm'])->name('login');
 Route::post('/user', [UserAuthController::class, 'login']);
-Route::post('/logout', [UserAuthController::class, 'logout'])->name('logout');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');
 
 Route::post('/user/dashboard', [UserController::class, 'login']);
-Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('dashboard_player');

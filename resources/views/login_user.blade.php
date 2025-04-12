@@ -12,11 +12,11 @@
       <div class="card p-4">
         <div class="mb-3">
           <label>Username</label>
-          <input type="text" id="username" class="form-control">
+          <input type="text" id="username" name="username" class="form-control">
         </div>
         <div class="mb-3">
           <label>Password</label>
-          <input type="password" id="password" class="form-control">
+          <input type="password" id="password" name="password" class="form-control">
         </div>
         <button type="submit" class="btn btn-success">Login</button>
         @if($errors->any())

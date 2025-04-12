@@ -12,16 +12,6 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
-        'administrator' => [
-            'driver' => 'session',
-            'provider' => 'administrators',
-        ],
-
-        'developer' => [
-            'driver' => 'session',
-            'provider' => 'developers',
-        ],
     ],
 
     'providers' => [
