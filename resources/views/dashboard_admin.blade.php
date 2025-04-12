@@ -14,8 +14,8 @@
         <a class="navbar-brand" href="index.html">Administrator Portal</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           
-         <li><a href="admins.html" class="nav-link px-2 text-white">List Admins</a></li>
-         <li><a href="users.html" class="nav-link px-2 text-white">List Users</a></li>
+         <li><a href="#" class="nav-link px-2 text-white">List Admins</a></li>
+         <li><a href="#" class="nav-link px-2 text-white">List Users</a></li>
          <li class="nav-item">
            <a class="nav-link active bg-dark" href="#">Welcome, Administrator</a>
          </li> 
