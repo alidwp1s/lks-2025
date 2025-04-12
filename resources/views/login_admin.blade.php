@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Login Admin</title>
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body class="bg-light">
   <div class="container mt-5">
@@ -21,7 +22,8 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/popper.js') }}"></script>
   <script>
     function loginAdmin() {
       axios.post('/api/login/admin', {

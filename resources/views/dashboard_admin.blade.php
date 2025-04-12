@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard - Administrator Portal</title>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   </head>
   <body>
    
@@ -45,8 +45,8 @@
     </main>
    
 
-    <script src="js/bootstrap.js"></script>
-    <script src="js/popper.js"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/popper.js') }}"></script>
     <script>
       function logout() {
         localStorage.removeItem('token');
